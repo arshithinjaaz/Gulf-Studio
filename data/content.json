@@ -46,6 +46,109 @@
       }
     ]
   },
+  "services": {
+    "items": [
+      {
+        "id": "video",
+        "title": "Video Production",
+        "description": "From concept to final cut, we create cinematic videos that tell your story and engage your audience. Every project is treated as a unique piece of art backed by commercial strategy.",
+        "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=700&q=85&auto=format&fit=crop",
+        "meta1_title": "What We Offer",
+        "meta1_items": "Corporate Videos\nCommercial Ads\nEvent Coverage\nMusic Videos\nSocial Media Content",
+        "meta2_title": "Our Process",
+        "meta2_items": "Concept & Scripting\nFilming & Direction\nPost Production\nColor Grading\nSound Design",
+        "cta_text": "Enquire Now"
+      },
+      {
+        "id": "photography",
+        "title": "Photography",
+        "description": "Professional photography that captures the essence of your brand, products, and moments with stunning precision and artistic vision.",
+        "image": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=700&q=85&auto=format&fit=crop",
+        "meta1_title": "What We Offer",
+        "meta1_items": "Corporate Branding\nProduct Photography\nEvent Photography\nPortrait Sessions\nArchitectural Shoots",
+        "meta2_title": "Benefits",
+        "meta2_items": "High engagement imagery\nProfessional retouching\nFast delivery\nAll formats provided\nCommercial license",
+        "cta_text": "Book a Shoot"
+      },
+      {
+        "id": "marketing",
+        "title": "Digital Marketing",
+        "description": "Strategic, data-driven online campaigns that boost brand visibility, generate qualified leads, and deliver measurable return on investment.",
+        "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=700&q=85&auto=format&fit=crop",
+        "meta1_title": "Channels",
+        "meta1_items": "Social Media Ads\nGoogle Ads / PPC\nSEO & Content\nEmail Marketing\nInfluencer Marketing",
+        "meta2_title": "Deliverables",
+        "meta2_items": "Campaign Strategy\nCreative Assets\nMonthly Reports\nA/B Testing\nPerformance Analytics",
+        "cta_text": "Start a Campaign"
+      },
+      {
+        "id": "social",
+        "title": "Social Media Management",
+        "description": "We manage your presence across Facebook, Instagram, LinkedIn, TikTok, YouTube, and X — with engaging content, consistent posting, and community growth strategies.",
+        "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=700&q=85&auto=format&fit=crop",
+        "meta1_title": "Platforms",
+        "meta1_items": "Instagram & Facebook\nLinkedIn\nTikTok\nYouTube\nX (Twitter)",
+        "meta2_title": "Services",
+        "meta2_items": "Account Setup & Audit\nContent Calendar\nDaily Posting\nCommunity Management\nMonthly Analytics",
+        "cta_text": "Manage My Socials"
+      },
+      {
+        "id": "events",
+        "title": "Event Organizing & Coverage",
+        "description": "From corporate conferences to private celebrations, we plan and execute events flawlessly — and capture every memorable moment with professional production.",
+        "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=700&q=85&auto=format&fit=crop",
+        "meta1_title": "Event Types",
+        "meta1_items": "Corporate Conferences\nProduct Launches\nPrivate Celebrations\nAward Ceremonies\nBrand Activations",
+        "meta2_title": "Coverage",
+        "meta2_items": "Photo & Video\nLive Streaming\nHighlight Reels\nPress Coverage\nSocial Media Posts",
+        "cta_text": "Plan an Event"
+      },
+      {
+        "id": "branding",
+        "title": "Branding & Corporate Identity",
+        "description": "We craft compelling brand identities that communicate your values, attract your target audience, and position you as a market leader.",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85&auto=format&fit=crop",
+        "meta1_title": "What We Create",
+        "meta1_items": "Logo Design\nBrand Guidelines\nColor & Typography\nBusiness Stationery\nRebranding Solutions",
+        "meta2_title": "Process",
+        "meta2_items": "Brand Discovery\nConcept Development\nDesign Iterations\nFinal Delivery\nUsage Guidelines",
+        "cta_text": "Build My Brand"
+      },
+      {
+        "id": "web",
+        "title": "Web Design & Development",
+        "description": "Fast, responsive websites and landing pages that reflect your brand, rank well, and convert visitors into leads — from wireframes to launch.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=85&auto=format&fit=crop",
+        "meta1_title": "Deliverables",
+        "meta1_items": "Business & portfolio sites\nLanding pages & funnels\nUI/UX & prototyping\nCMS setup & handover\nPerformance & SEO basics",
+        "meta2_title": "Tech & stack",
+        "meta2_items": "Responsive layouts\nAccessibility-minded markup\nAnalytics & forms\nHosting guidance\nOngoing support options",
+        "cta_text": "Start a Web Project"
+      },
+      {
+        "id": "content",
+        "title": "Content Creation",
+        "description": "Scroll-stopping copy, visuals, and campaign assets tailored for social, ads, and influencers — aligned with your brand voice and goals.",
+        "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=700&q=85&auto=format&fit=crop",
+        "meta1_title": "Formats",
+        "meta1_items": "Social posts & carousels\nAd creatives & hooks\nBriefs & influencer kits\nBlog & long-form copy\nNewsletters & email",
+        "meta2_title": "Workflow",
+        "meta2_items": "Strategy & calendar\nProduction & revisions\nBrand-safe approvals\nPublishing support\nPerformance review",
+        "cta_text": "Plan My Content"
+      },
+      {
+        "id": "post",
+        "title": "Video Editing & Post-Production",
+        "description": "Polished edits, motion graphics, color, and sound that elevate raw footage into stories that hold attention — for ads, social, and long-form.",
+        "image": "https://images.unsplash.com/photo-1533750516457-a487cefc5c14?w=700&q=85&auto=format&fit=crop",
+        "meta1_title": "Capabilities",
+        "meta1_items": "Editorial & pacing\nMotion graphics & titles\nColor grading\nSound design & mix\nDeliverables for all platforms",
+        "meta2_title": "Ideal for",
+        "meta2_items": "Commercials & promos\nSocial cuts & variants\nEvent highlights\nCorporate & internal\nVFX touch-ups",
+        "cta_text": "Edit My Footage"
+      }
+    ]
+  },
   "pricing": {
     "packages": [
       {

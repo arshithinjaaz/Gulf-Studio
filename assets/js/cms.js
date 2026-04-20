@@ -201,7 +201,35 @@
     revealInjected(pricingGrid);
   }
 
-  /* ── 5. Contact info fields ── */
+  /* ── 5. Services detail sections ── */
+  const serviceItems = C.services?.items || [];
+  serviceItems.forEach(svc => {
+    const el = document.querySelector(`[data-cms-service="${svc.id}"]`);
+    if (!el) return;
+    const img = el.querySelector('.service-detail-img img');
+    if (img && svc.image) { img.src = svc.image; img.alt = svc.title || img.alt; }
+    const h2 = el.querySelector('.service-detail-content h2');
+    if (h2 && svc.title) h2.textContent = svc.title;
+    const desc = el.querySelector('.service-detail-content > p');
+    if (desc && svc.description) desc.textContent = svc.description;
+    const metaBoxes = el.querySelectorAll('.meta-box');
+    if (metaBoxes[0]) {
+      const h5 = metaBoxes[0].querySelector('h5');
+      if (h5 && svc.meta1_title) h5.textContent = svc.meta1_title;
+      const ul = metaBoxes[0].querySelector('.meta-list');
+      if (ul && svc.meta1_items) ul.innerHTML = svc.meta1_items.split('\n').filter(i => i.trim()).map(i => `<li>${i.trim()}</li>`).join('');
+    }
+    if (metaBoxes[1]) {
+      const h5 = metaBoxes[1].querySelector('h5');
+      if (h5 && svc.meta2_title) h5.textContent = svc.meta2_title;
+      const ul = metaBoxes[1].querySelector('.meta-list');
+      if (ul && svc.meta2_items) ul.innerHTML = svc.meta2_items.split('\n').filter(i => i.trim()).map(i => `<li>${i.trim()}</li>`).join('');
+    }
+    const cta = el.querySelector('.service-detail-content .btn');
+    if (cta && svc.cta_text) cta.textContent = svc.cta_text;
+  });
+
+  /* ── 6. Contact info & social ── */
   const sitePhone   = C.site?.phone;
   const siteEmail   = C.site?.email;
   const siteAddress = C.site?.address;
@@ -218,7 +246,7 @@
   if (soc.youtube)   document.querySelectorAll('[data-cms="site.social.youtube"]').forEach(el =>   el.href = soc.youtube);
   if (soc.linkedin)  document.querySelectorAll('[data-cms="site.social.linkedin"]').forEach(el =>  el.href = soc.linkedin);
 
-  /* ── 6. Hero stat counter ── */
+  /* ── 7. Hero stat counter ── */
   const statNum = C.home?.hero?.stat_number;
   if (statNum) {
     document.querySelectorAll('[data-count]').forEach(el => {

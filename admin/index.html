@@ -280,6 +280,25 @@ input,textarea,select,button { font-family:inherit; font-size:14px; }
 .portfolio-admin-actions { display:flex; gap:6px; }
 .portfolio-admin-actions .btn { flex:1; justify-content:center; }
 
+/* ── Services ── */
+.services-admin-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));
+  gap:18px; margin-top:4px; width:100%;
+}
+.service-admin-card {
+  border-radius:var(--radius-lg); overflow:hidden;
+  border:1px solid var(--gray-200); background:var(--white);
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+  transition:box-shadow var(--transition),transform var(--transition);
+}
+.service-admin-card:hover { box-shadow:var(--shadow-md); transform:translateY(-2px); }
+.service-admin-img { height:140px; overflow:hidden; }
+.service-admin-img img { width:100%; height:100%; object-fit:cover; }
+.service-admin-body { padding:12px 14px; display:flex; flex-direction:column; gap:6px; }
+.service-admin-title { font-weight:700; font-size:0.88rem; color:var(--navy); }
+.service-admin-desc { font-size:0.78rem; color:var(--gray-500); line-height:1.5; flex:1; }
+
 /* ── Pricing ── */
 .pricing-admin-grid {
   display:grid;
@@ -488,6 +507,10 @@ input,textarea,select,button { font-family:inherit; font-size:14px; }
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         <span class="nav-label">Portfolio</span>
       </div>
+      <div class="nav-item" data-section="services">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        <span class="nav-label">Services</span>
+      </div>
       <div class="nav-item" data-section="blog">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         <span class="nav-label">Blog Posts</span>
@@ -664,6 +687,17 @@ input,textarea,select,button { font-family:inherit; font-size:14px; }
           </div>
           <div class="portfolio-admin-grid" id="portfolio-grid"></div>
         </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="section-page" id="sec-services">
+        <div class="admin-toolbar">
+          <div>
+            <div class="admin-toolbar-title">Services</div>
+            <div class="text-muted">Edit the image, title, description and bullet lists for each service</div>
+          </div>
+        </div>
+        <div id="services-admin-list"></div>
       </div>
 
       <!-- BLOG -->
@@ -906,6 +940,65 @@ input,textarea,select,button { font-family:inherit; font-size:14px; }
   </div>
 </div>
 
+<!-- ═══════ SERVICES MODAL ═══════ -->
+<div class="modal-overlay" id="services-modal" style="display:none;" onclick="closeServicesModal(event)">
+  <div class="modal-box" style="max-width:560px;">
+    <div class="modal-header">
+      <h3 id="services-modal-title">Edit Service</h3>
+      <button class="modal-close" onclick="closeServicesModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="sm-id"/>
+      <div class="form-group">
+        <label class="form-label">Service Title</label>
+        <input class="form-input" id="sm-title" type="text" placeholder="e.g. Video Production"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Description</label>
+        <textarea class="form-input form-textarea" id="sm-description" rows="3" placeholder="Short paragraph describing this service…"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Service Image</label>
+        <div class="img-upload-area" id="sm-upload-area">
+          <img id="sm-preview" class="img-preview" alt="preview"/>
+          <input type="file" accept="image/*" id="sm-file" onchange="handleServiceImg(event)"/>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="color:var(--gray-300);margin-bottom:6px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <div class="img-upload-text">Click to upload image<br/><small>or paste a URL below</small></div>
+        </div>
+        <input class="form-input img-url-input" id="sm-url" type="url" placeholder="https://… (image URL)" oninput="previewFromUrl('sm-url','sm-preview')"/>
+      </div>
+      <div class="admin-form-row-2">
+        <div class="form-group">
+          <label class="form-label">List 1 — Title</label>
+          <input class="form-input" id="sm-meta1-title" type="text" placeholder="e.g. What We Offer"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">List 2 — Title</label>
+          <input class="form-input" id="sm-meta2-title" type="text" placeholder="e.g. Our Process"/>
+        </div>
+      </div>
+      <div class="admin-form-row-2">
+        <div class="form-group">
+          <label class="form-label">List 1 Items <span style="font-weight:400;color:var(--gray-400);text-transform:none;letter-spacing:0;">(one per line)</span></label>
+          <textarea class="form-input form-textarea" id="sm-meta1-items" rows="5" placeholder="Item 1&#10;Item 2&#10;Item 3"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">List 2 Items <span style="font-weight:400;color:var(--gray-400);text-transform:none;letter-spacing:0;">(one per line)</span></label>
+          <textarea class="form-input form-textarea" id="sm-meta2-items" rows="5" placeholder="Item 1&#10;Item 2&#10;Item 3"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">CTA Button Text</label>
+        <input class="form-input" id="sm-cta" type="text" placeholder="e.g. Enquire Now"/>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeServicesModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveServiceItem()">Save Service</button>
+    </div>
+  </div>
+</div>
+
 <!-- Toast -->
 <div class="toast" id="toast"></div>
 
@@ -938,6 +1031,7 @@ async function boot() {
   renderDashboard();
   renderHomepageImages();
   renderPortfolio();
+  renderServices();
   renderBlog();
   renderPricing();
   loadSettings();
@@ -1121,6 +1215,92 @@ function deletePortfolioItem(id) {
   if (!confirm('Delete this portfolio item?')) return;
   C.portfolio.items = C.portfolio.items.filter(i => i.id !== id);
   renderPortfolio(); renderDashboard(); save();
+}
+
+/* ═══════════════════════════════════
+   SERVICES
+═══════════════════════════════════ */
+let _editingServiceId = null;
+
+function renderServices() {
+  const list = document.getElementById('services-admin-list');
+  if (!list) return;
+  const items = C.services?.items || [];
+  if (!items.length) {
+    list.innerHTML = '<div class="empty-state"><p>No services found.</p></div>';
+    return;
+  }
+  list.innerHTML = `<div class="services-admin-grid">${items.map(svc => `
+    <div class="service-admin-card">
+      <div class="service-admin-img">
+        <img src="${svc.image || ''}" alt="${svc.title}" loading="lazy" onerror="this.style.opacity='.2'"/>
+      </div>
+      <div class="service-admin-body">
+        <div class="service-admin-title">${svc.title}</div>
+        <div class="service-admin-desc">${svc.description ? svc.description.substring(0,80) + '…' : ''}</div>
+        <button class="btn btn-primary btn-sm" onclick="openServicesModal('${svc.id}')">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Edit
+        </button>
+      </div>
+    </div>`).join('')}
+  </div>`;
+}
+
+function openServicesModal(id) {
+  _editingServiceId = id;
+  const svc = (C.services?.items || []).find(s => s.id === id);
+  if (!svc) return;
+  document.getElementById('services-modal-title').textContent = 'Edit — ' + svc.title;
+  document.getElementById('sm-id').value           = svc.id;
+  document.getElementById('sm-title').value        = svc.title || '';
+  document.getElementById('sm-description').value  = svc.description || '';
+  document.getElementById('sm-url').value          = svc.image || '';
+  document.getElementById('sm-meta1-title').value  = svc.meta1_title || '';
+  document.getElementById('sm-meta1-items').value  = (svc.meta1_items || '').replace(/\\n/g, '\n');
+  document.getElementById('sm-meta2-title').value  = svc.meta2_title || '';
+  document.getElementById('sm-meta2-items').value  = (svc.meta2_items || '').replace(/\\n/g, '\n');
+  document.getElementById('sm-cta').value          = svc.cta_text || '';
+  const prev = document.getElementById('sm-preview');
+  if (svc.image) { prev.src = svc.image; prev.style.display = 'block'; }
+  else prev.style.display = 'none';
+  document.getElementById('services-modal').style.display = 'flex';
+}
+
+function closeServicesModal(e) {
+  if (e && e.target !== document.getElementById('services-modal')) return;
+  document.getElementById('services-modal').style.display = 'none';
+}
+
+async function handleServiceImg(e) {
+  const file = e.target.files[0]; if (!file) return;
+  const url = await uploadImage(file);
+  if (url) { document.getElementById('sm-url').value = url; previewFromUrl('sm-url', 'sm-preview'); }
+}
+
+function saveServiceItem() {
+  const id          = document.getElementById('sm-id').value;
+  const title       = document.getElementById('sm-title').value.trim();
+  const description = document.getElementById('sm-description').value.trim();
+  const image       = document.getElementById('sm-url').value.trim();
+  const meta1_title = document.getElementById('sm-meta1-title').value.trim();
+  const meta1_items = document.getElementById('sm-meta1-items').value.trim();
+  const meta2_title = document.getElementById('sm-meta2-title').value.trim();
+  const meta2_items = document.getElementById('sm-meta2-items').value.trim();
+  const cta_text    = document.getElementById('sm-cta').value.trim();
+
+  if (!title) { toast('Please enter a title', 'error'); return; }
+
+  if (!C.services) C.services = { items: [] };
+  const idx = C.services.items.findIndex(s => s.id === id);
+  const updated = { id, title, description, image, meta1_title, meta1_items, meta2_title, meta2_items, cta_text };
+  if (idx > -1) C.services.items[idx] = updated;
+  else C.services.items.push(updated);
+
+  document.getElementById('services-modal').style.display = 'none';
+  renderServices();
+  save();
+  toast('Service saved!');
 }
 
 /* ═══════════════════════════════════
