@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Gulf Studio FZE LLC</title>
+  <meta name="description" content="Explore Gulf Studio's visual portfolio — cinematic videos, brand photography, digital campaigns, and event coverage." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231AACBF'/><circle cx='50' cy='50' r='18' fill='white'/></svg>" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="Gulf Studio FZE LLC" class="logo-img" />
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-dark">Get a Quote</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span class="current">Portfolio</span>
+      </div>
+      <h1 data-cms-html="pages.portfolio.hero_heading">Our Visual <span>Portfolio</span></h1>
+      <p data-cms="pages.portfolio.hero_sub">Explore our latest projects across video production, photography, and digital campaigns.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Portfolio Grid ── -->
+<section class="section portfolio-gallery-section">
+  <div class="container">
+    <header class="portfolio-gallery-head fade-up">
+      <span class="section-label">Selected Work</span>
+      <p class="portfolio-gallery-lead">Commercial film, brand photography, and campaigns — produced end-to-end in Dubai with the same team from treatment to delivery.</p>
+    </header>
+
+    <div class="portfolio-toolbar fade-up fade-up-delay-1">
+      <p class="portfolio-item-count"><strong>9</strong> curated projects</p>
+      <div class="portfolio-filters" role="tablist" aria-label="Filter portfolio by type">
+        <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          All Work
+        </button>
+        <button type="button" class="filter-btn" data-filter="video" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          Video
+        </button>
+        <button type="button" class="filter-btn" data-filter="photo" role="tab" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          Photography
+        </button>
+      </div>
+    </div>
+
+    <div class="portfolio-full-grid" id="cms-portfolio-grid">
+      <div class="portfolio-item fade-up" data-type="video">
+        <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=700&q=80&auto=format&fit=crop" alt="Commercial Film" loading="lazy"/>
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-type-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+        <div class="portfolio-info"><div class="portfolio-badge">Video</div><h3>Commercial Film</h3></div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-1" data-type="photo">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80&auto=format&fit=crop" alt="Landscape Photography" loading="lazy"/>
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-type-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <div class="portfolio-info"><div class="portfolio-badge">Photography</div><h3>Landscape Series</h3></div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-2" data-type="video">
+        <img src="https://images.unsplash.com/photo-1533134486753-c833f0ed4866?w=700&q=80&auto=format&fit=crop" alt="Event Coverage" loading="lazy"/>
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-type-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+        <div class="portfolio-info"><div class="portfolio-badge">Video</div><h3>Corporate Event</h3></div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-3" data-type="photo">
+        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=700&q=80&auto=format&fit=crop" alt="Product Photography" loading="lazy"/>
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-type-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <div class="portfolio-info"><div class="portfolio-badge">Photography</div><h3>Product Showcase</h3></div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-4" data-type="video">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop" alt="Brand Campaign" loading="lazy"/>
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-type-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+        <div class="portfolio-info"><div class="portfolio-badge">Video</div><h3>Brand Campaign</h3></div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-5" data-type="photo">
+        <img src="https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?w=700&q=80&auto=format&fit=crop" alt="Architecture Photography" loading="lazy"/>
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-type-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <div class="portfolio-info"><div class="portfolio-badge">Photography</div><h3>Architecture Series</h3></div>
+      </div>
+      <div class="portfolio-item fade-up" data-type="video">
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=700&q=80&auto=format&fit=crop" alt="Documentary" loading="lazy"/>
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-type-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+        <div class="portfolio-info"><div class="portfolio-badge">Video</div><h3>Documentary Feature</h3></div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-1" data-type="photo">
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=700&q=80&auto=format&fit=crop" alt="Nature Photography" loading="lazy"/>
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-type-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <div class="portfolio-info"><div class="portfolio-badge">Photography</div><h3>Nature &amp; Wildlife</h3></div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-2" data-type="video">
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=700&q=80&auto=format&fit=crop" alt="Fashion Film" loading="lazy"/>
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-type-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+        <div class="portfolio-info"><div class="portfolio-badge">Video</div><h3>Fashion Film</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Behind the Process ── -->
+<section class="behind-section behind-section--portfolio">
+  <div class="container">
+    <div class="text-center fade-up">
+      <span class="section-label" style="justify-content: center;">Post-Production</span>
+      <h2 class="behind-section-title">Behind the Process</h2>
+      <p class="behind-section-lead">From log profiles to the final grade — how we shape picture and mood for screens of every size.</p>
+    </div>
+    <div class="before-after before-after--split">
+      <div class="ba-card fade-up fade-up-delay-1">
+        <div class="ba-card-media">
+          <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=700&q=80&auto=format&fit=crop" alt="Raw footage" loading="lazy"/>
+          <div class="ba-label">Raw Footage</div>
+        </div>
+        <p class="ba-desc">Initial capture with a flat color profile to preserve latitude for grading and VFX.</p>
+      </div>
+      <div class="ba-connector fade-up" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="ba-card fade-up fade-up-delay-2">
+        <div class="ba-card-media">
+          <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=700&q=80&auto=format&fit=crop" alt="Final grade" loading="lazy"/>
+          <div class="ba-label">Final Grade</div>
+        </div>
+        <p class="ba-desc">Color grading, contrast, and polish tuned for your brand and delivery specs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-banner">
+  <div class="container">
+    <h2 class="fade-up">Have a project in mind?</h2>
+    <p class="fade-up fade-up-delay-1">Let's create something extraordinary together. Reach out and let's start the conversation.</p>
+    <div class="cta-actions fade-up fade-up-delay-2">
+      <a href="contact.html" class="btn btn-white btn-lg">Start a Project</a>
+      <a href="pricing.html" class="btn btn-outline-white btn-lg">View Packages</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <a href="index.html"><img src="assets/images/logo.png" alt="Gulf Studio FZE LLC" class="logo-img" /></a>
+        </div>
+        <p>Bringing Ideas to Life through powerful visual and digital experiences. We specialize in creating content that converts.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.41 19.1C5.12 19.56 12 19.56 12 19.56s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.48z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+          <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pricing.html">Pricing Plans</a></li>
+          <li><a href="blog.html">Blog &amp; Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#video">Video Production</a></li>
+          <li><a href="services.html#photography">Photography</a></li>
+          <li><a href="services.html#marketing">Digital Marketing</a></li>
+          <li><a href="services.html#social">Social Media Management</a></li>
+          <li><a href="services.html#events">Event Organizing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact">
+          <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Dubai, United Arab Emirates</span></div>
+          <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+971 58 143 3544</span></div>
+          <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>contact@gulfstudio.org</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Gulf Studio FZE LLC. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/971581433544" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cms.js"></script>
+
+<!-- ── Video Modal ── -->
+<div class="video-modal-overlay" id="video-modal" role="dialog" aria-modal="true">
+  <div class="video-modal-inner" id="video-modal-inner">
+    <button class="video-modal-close" onclick="closeVideoModal()" aria-label="Close video">✕</button>
+  </div>
+</div>
+
+<script>
+  function openVideoModal(url) {
+    if (!url) return;
+    const inner = document.getElementById('video-modal-inner');
+    Array.from(inner.children).forEach(c => { if (!c.classList.contains('video-modal-close')) c.remove(); });
+    inner.insertAdjacentHTML('beforeend', buildVideoEmbed(url));
+    document.getElementById('video-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideoModal() {
+    const overlay = document.getElementById('video-modal');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    const inner = document.getElementById('video-modal-inner');
+    const iframe = inner.querySelector('iframe');
+    const video  = inner.querySelector('video');
+    if (iframe) { const s = iframe.src; iframe.src = ''; iframe.src = s; }
+    if (video)  video.pause();
+  }
+  function buildVideoEmbed(url) {
+    const yt = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([A-Za-z0-9_-]{11})/);
+    if (yt) return `<iframe src="https://www.youtube.com/embed/${yt[1]}?autoplay=1&rel=0" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+    const vm = url.match(/vimeo\.com\/(\d+)/);
+    if (vm) return `<iframe src="https://player.vimeo.com/video/${vm[1]}?autoplay=1" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+    return `<video src="${url}" controls autoplay playsinline></video>`;
+  }
+  document.getElementById('video-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeVideoModal();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVideoModal(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+{
+  "site": {
+    "name": "Gulf Studio FZE LLC",
+    "tagline": "Bringing Ideas to Life",
+    "phone": "+971 58 143 3544",
+    "email": "contact@gulfstudio.org",
+    "address": "Dubai, United Arab Emirates",
+    "whatsapp": "971581433544",
+    "social": {
+      "instagram": "https://instagram.com",
+      "facebook": "https://facebook.com",
+      "youtube": "https://youtube.com",
+      "linkedin": "https://linkedin.com"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Dubai's Premier Creative Studio",
+      "description": "Bringing Ideas to Life through powerful visual and digital experiences. We don't just create content; we build brands.",
+      "stat_number": "500",
+      "stat_label": "Projects Completed",
+      "image": "",
+      "video_url": "/assets/videos/uploads/1776681051737-72blp3.mp4"
+    },
+    "about_preview": {
+      "years_experience": "10",
+      "heading": "We are more than just a studio. We are your creative partners.",
+      "description": "Gulf Studio FZE LLC is a premier creative agency based in Dubai. We specialize in bringing ideas to life through powerful visual and digital experiences. Our mission is to help brands connect with their audience in meaningful ways.",
+      "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=85&auto=format&fit=crop"
+    },
+    "featured_work": [
+      {
+        "title": "Commercial Film",
+        "badge": "Video Production",
+        "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=900&q=85&auto=format&fit=crop"
+      },
+      {
+        "title": "Product Showcase",
+        "badge": "Photography",
+        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=700&q=85&auto=format&fit=crop"
+      },
+      {
+        "title": "Digital Marketing",
+        "badge": "Brand Campaign",
+        "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=700&q=85&auto=format&fit=crop"
+      }
+    ]
+  },
+  "pricing": {
+    "packages": [
+      {
+        "id": "starter",
+        "name": "Starter Package",
+        "description": "Perfect for small businesses and startups looking to establish their presence.",
+        "price": "Contact Us",
+        "price_note": "Custom quote based on requirements",
+        "featured": false,
+        "badge": "",
+        "features": [
+          "1 Professional Video (60s)",
+          "10 High-Res Photos",
+          "Social Media Setup",
+          "Basic SEO Audit",
+          "1 Revision Round"
+        ]
+      },
+      {
+        "id": "business",
+        "name": "Business Package",
+        "description": "Ideal for growing brands that need consistent, high-quality content.",
+        "price": "Contact Us",
+        "price_note": "Custom quote based on requirements",
+        "featured": true,
+        "badge": "Most Popular",
+        "features": [
+          "3 Professional Videos",
+          "30 High-Res Photos",
+          "Social Media Management (1 Month)",
+          "Full Digital Marketing Strategy",
+          "3 Revision Rounds",
+          "Priority Support"
+        ]
+      },
+      {
+        "id": "premium",
+        "name": "Premium Package",
+        "description": "The ultimate solution for established enterprises seeking market dominance.",
+        "price": "Contact Us",
+        "price_note": "Custom enterprise quote",
+        "featured": false,
+        "badge": "",
+        "features": [
+          "Unlimited Video Production",
+          "Unlimited Photography",
+          "Full Social Media & PR",
+          "Advanced SEO & PPC Management",
+          "Unlimited Revisions",
+          "Dedicated Account Manager",
+          "Event Coverage Included"
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "items": [
+      {
+        "id": "p1",
+        "title": "Commercial Film",
+        "category": "Video",
+        "type": "video",
+        "image": "https://images.unsplash.com/photo-1493612276216-ee3925520721?w=700&q=80&auto=format&fit=crop",
+        "video_url": ""
+      },
+      {
+        "id": "p2",
+        "title": "Landscape Series",
+        "category": "Photography",
+        "type": "photo",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80&auto=format&fit=crop",
+        "video_url": ""
+      },
+      {
+        "id": "p3",
+        "title": "Corporate Event",
+        "category": "Video",
+        "type": "video",
+        "image": "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?w=700&q=80&auto=format&fit=crop",
+        "video_url": ""
+      },
+      {
+        "id": "p4",
+        "title": "Product Showcase",
+        "category": "Photography",
+        "type": "photo",
+        "image": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=700&q=80&auto=format&fit=crop",
+        "video_url": ""
+      },
+      {
+        "id": "p5",
+        "title": "Brand Campaign",
+        "category": "Video",
+        "type": "video",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop",
+        "video_url": ""
+      },
+      {
+        "id": "p6",
+        "title": "Architecture Series",
+        "category": "Photography",
+        "type": "photo",
+        "image": "https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?w=700&q=80&auto=format&fit=crop",
+        "video_url": ""
+      },
+      {
+        "id": "p7",
+        "title": "Documentary Feature",
+        "category": "Video",
+        "type": "video",
+        "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=700&q=80&auto=format&fit=crop",
+        "video_url": ""
+      },
+      {
+        "id": "p8",
+        "title": "Nature & Wildlife",
+        "category": "Photography",
+        "type": "photo",
+        "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=700&q=80&auto=format&fit=crop",
+        "video_url": ""
+      },
+      {
+        "id": "p9",
+        "title": "Fashion Film",
+        "category": "Video",
+        "type": "video",
+        "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=700&q=80&auto=format&fit=crop",
+        "video_url": ""
+      }
+    ]
+  },
+  "pages": {
+    "home": {
+      "hero_eyebrow": "Dubai's Premier Creative Studio",
+      "hero_desc": "Bringing Ideas to Life through powerful visual and digital experiences. We don't just create content; we build <strong>brands</strong>.",
+      "about_label": "About Gulf Studio",
+      "about_heading": "We are more than just a studio.<br>We are your <span class=\"text-teal\">creative partners.</span>",
+      "about_desc": "Gulf Studio FZE LLC is a premier creative agency based in Dubai. We specialize in bringing ideas to life through powerful visual and digital experiences. Our mission is to help brands connect with their audience in meaningful ways.",
+      "about_years": "10",
+      "services_label": "What We Do",
+      "services_heading": "Our Expertise",
+      "services_sub": "We offer a comprehensive suite of creative services designed to help your business stand out in a crowded digital landscape.",
+      "why_label": "Why Gulf Studio",
+      "why_heading": "Why Choose Us",
+      "why_sub": "We combine technical excellence with creative passion to deliver results that exceed expectations.",
+      "featured_heading": "Featured Work",
+      "featured_sub": "A glimpse into the stories we've told and the brands we've elevated. Quality and creativity in every frame.",
+      "cta_heading": "Ready to elevate your brand?",
+      "cta_sub": "Contact us today for a free consultation and let's discuss how we can help you achieve your goals."
+    },
+    "about": {
+      "hero_heading": "Our Story &amp; <span>Vision</span>",
+      "hero_sub": "From a small creative collective to a full-scale production house, Gulf Studio has always been driven by one goal: excellence in visual storytelling.",
+      "story_p1": "Founded in the heart of Dubai, Gulf Studio FZE LLC began with a passion for high-end cinematography and photography. We saw a gap in the market for a studio that truly understood the intersection of art and marketing.",
+      "story_p2": "Over the years, we've expanded our team and our capabilities, incorporating digital marketing and social media management to provide a holistic creative solution for our clients. Today, we are proud to be one of the region's most trusted creative partners.",
+      "story_p3": "Gulf Studio FZE LLC is a modern media production and digital marketing company based in the United Arab Emirates. We specialize in delivering high-quality visual content and strategic digital solutions that help businesses build strong brand identities and grow in today's competitive digital environment.",
+      "motto": "Visualizing Success, Capturing Excellence.",
+      "mission_heading": "Our Mission",
+      "mission_text": "Create. Capture. Connect. Convert. — To empower brands through innovative visual content and strategic digital marketing, fostering meaningful connections that drive growth and success.",
+      "vision_heading": "Our Vision",
+      "vision_text": "To become a leading media production and digital marketing company in the UAE and international markets, recognized for innovation, quality, and impactful brand storytelling.",
+      "fourcs_sub": "Every project we take on follows our proven four-step creative and commercial framework.",
+      "create_h": "Create", "create_p": "Develop innovative concepts and strategies uniquely tailored to each client's needs and market position.",
+      "capture_h": "Capture", "capture_p": "Produce high-quality video and photography content that tells compelling brand stories with cinematic precision.",
+      "connect_h": "Connect", "connect_p": "Build strong digital presence and genuine audience engagement across all relevant platforms and channels.",
+      "convert_h": "Convert", "convert_p": "Deliver measurable results, qualified leads, and sustainable business growth that makes a real difference.",
+      "cta_heading": "Our Commitment to You",
+      "cta_text": "We are committed to delivering excellence, creativity, and measurable results. Our goal is to build long-term partnerships by helping our clients grow, connect with their audience, and achieve their business objectives."
+    },
+    "services": {
+      "hero_heading": "Our Expert <span>Services</span>",
+      "hero_sub": "Comprehensive creative and digital solutions tailored to your business goals — from concept to conversion."
+    },
+    "contact": {
+      "hero_heading": "Get in Touch with <span>Us</span>",
+      "hero_sub": "Have a project in mind? We'd love to hear from you. Let's create something amazing together."
+    },
+    "pricing": {
+      "hero_heading": "Pricing Plans &amp; <span>Packages</span>",
+      "hero_sub": "Transparent and flexible packages designed to fit your unique business needs and budget."
+    },
+    "portfolio": {
+      "hero_heading": "Our Visual <span>Portfolio</span>",
+      "hero_sub": "Explore our latest projects across video production, photography, and digital campaigns."
+    },
+    "blog": {
+      "hero_heading": "Blog &amp; Expert <span>Insights</span>",
+      "hero_sub": "Stay updated with the latest trends in marketing, production, and social media."
+    }
+  },
+  "blog": {
+    "posts": [
+      {
+        "id": "b1",
+        "title": "10 Tips for Viral Social Media Content in 2024",
+        "category": "Social Media",
+        "date": "Oct 12, 2024",
+        "author": "Sarah J.",
+        "excerpt": "Discover the secrets to creating content that resonates with your audience and triggers the share response. Learn the psychology behind virality.",
+        "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80&auto=format&fit=crop"
+      },
+      {
+        "id": "b2",
+        "title": "Why Video is the Future of Digital Marketing",
+        "category": "Video",
+        "date": "Oct 08, 2024",
+        "author": "Mark T.",
+        "excerpt": "Statistics show that video content has the highest ROI of any marketing format. Learn how to leverage it for your brand in the UAE market.",
+        "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80&auto=format&fit=crop"
+      },
+      {
+        "id": "b3",
+        "title": "Building a Strong Brand Identity in the UAE Market",
+        "category": "Branding",
+        "date": "Sep 25, 2024",
+        "author": "Gulf Studio",
+        "excerpt": "The UAE's multicultural market requires a unique approach to branding. Here's how to create an identity that resonates across cultures and demographics.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop"
+      },
+      {
+        "id": "b4",
+        "title": "Photography Trends Dominating UAE Business in 2024",
+        "category": "Photography",
+        "date": "Sep 15, 2024",
+        "author": "Gulf Studio",
+        "excerpt": "From aerial drone shots to authentic lifestyle photography, discover the visual styles shaping UAE business marketing in the year ahead.",
+        "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80&auto=format&fit=crop"
+      },
+      {
+        "id": "b5",
+        "title": "Event Planning Checklist: From Concept to Execution",
+        "category": "Events",
+        "date": "Sep 05, 2024",
+        "author": "Ahmad R.",
+        "excerpt": "Planning a successful event in Dubai requires meticulous attention to detail. Our comprehensive checklist covers everything from venue to post-event analysis.",
+        "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80&auto=format&fit=crop"
+      },
+      {
+        "id": "b6",
+        "title": "SEO vs Paid Ads: Which Strategy Wins for UAE Businesses",
+        "category": "Marketing",
+        "date": "Aug 20, 2024",
+        "author": "Nadia K.",
+        "excerpt": "The age-old debate: organic SEO or paid advertising? We break down the pros, cons, and best combination for businesses operating in Dubai and the UAE.",
+        "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&q=80&auto=format&fit=crop"
+      }
+    ]
+  }
+}

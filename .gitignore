@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Environment & secrets (use ADMIN_PASS etc. locally)
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+
+# CMS uploads (large / client files; server creates folders on first upload)
+assets/images/uploads/*
+assets/videos/uploads/*
