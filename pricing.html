@@ -10,12 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231AACBF'/><circle cx='50' cy='50' r='18' fill='white'/></svg>" />
-  <style>
-    .pricing-hero { background: var(--white); padding: calc(var(--nav-h) + 96px) 0 88px; text-align: center; border-bottom: 1px solid var(--gray-200); }
-    .pricing-hero h1 { font-size: clamp(2.4rem,5vw,3.6rem); margin-bottom: 14px; letter-spacing: -0.03em; }
-    .pricing-hero h1 span { color: var(--teal); opacity: .35; }
-    .pricing-hero p { color: var(--gray-500); max-width: 520px; margin: 0 auto; font-size: 1rem; line-height: 1.78; }
-  </style>
 </head>
 <body class="page-pricing">
 
@@ -29,7 +23,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -42,7 +36,7 @@
 <!-- ── Pricing Hero ── -->
 <div class="pricing-hero">
   <div class="container">
-    <div class="breadcrumb" style="justify-content:center;margin-bottom:20px;">
+    <div class="breadcrumb" style="justify-content:center;margin-bottom:18px;">
       <a href="index.html">Home</a><span>/</span><span class="current">Pricing</span>
     </div>
     <h1 class="fade-up" data-cms-html="pages.pricing.hero_heading">Pricing Plans &amp; <span>Packages</span></h1>
@@ -64,8 +58,8 @@
         <p class="plan-desc">Perfect for small businesses and startups looking to establish their presence.</p>
         <div class="plan-price-area">
           <div class="plan-price-label">Pricing</div>
-          <div style="font-size:1.5rem;font-weight:800;color:var(--navy);">Contact Us</div>
-          <div style="font-size:0.82rem;color:var(--gray-400);margin-top:4px;">Custom quote based on requirements</div>
+          <div class="plan-price-value">Contact Us</div>
+          <div class="plan-price-note">Custom quote based on requirements</div>
         </div>
         <ul class="plan-features">
           <li class="plan-feature"><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>1 Professional Video (60s)</li>
@@ -87,8 +81,8 @@
         <p class="plan-desc">Ideal for growing brands that need consistent, high-quality content.</p>
         <div class="plan-price-area">
           <div class="plan-price-label">Pricing</div>
-          <div style="font-size:1.5rem;font-weight:800;color:var(--teal);">Contact Us</div>
-          <div style="font-size:0.82rem;color:var(--gray-400);margin-top:4px;">Custom quote based on requirements</div>
+          <div class="plan-price-value">Contact Us</div>
+          <div class="plan-price-note">Custom quote based on requirements</div>
         </div>
         <ul class="plan-features">
           <li class="plan-feature teal-text"><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>3 Professional Videos</li>
@@ -110,8 +104,8 @@
         <p class="plan-desc">The ultimate solution for established enterprises seeking market dominance.</p>
         <div class="plan-price-area">
           <div class="plan-price-label">Pricing</div>
-          <div style="font-size:1.5rem;font-weight:800;color:var(--navy);">Contact Us</div>
-          <div style="font-size:0.82rem;color:var(--gray-400);margin-top:4px;">Custom enterprise quote</div>
+          <div class="plan-price-value">Contact Us</div>
+          <div class="plan-price-note">Custom enterprise quote</div>
         </div>
         <ul class="plan-features">
           <li class="plan-feature"><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Video Production</li>

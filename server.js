@@ -12,9 +12,9 @@ const path    = require('path');
 const fs      = require('fs');
 
 const app  = express();
-const PORT       = process.env.PORT       || 3000;
-const ADMIN_PASS = process.env.ADMIN_PASS || 'gulfstudio2026';
-const SESSION_SECRET = 'gs-cms-session-secret-7f3x';
+const PORT           = process.env.PORT           || 3000;
+const ADMIN_PASS     = process.env.ADMIN_PASS     || 'gulfstudio2026';
+const SESSION_SECRET = process.env.SESSION_SECRET || 'gs-cms-session-secret-7f3x';
 const DATA_FILE  = path.join(__dirname, 'data', 'content.json');
 const DEFAULT_FILE = path.join(__dirname, 'data', 'content.default.json');
 

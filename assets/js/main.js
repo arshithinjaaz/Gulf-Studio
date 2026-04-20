@@ -120,35 +120,33 @@
     });
   });
 
-  /* ── Portfolio filter — smooth fade ── */
-  const filterBtns     = document.querySelectorAll('.filter-btn');
-  const portfolioItems = document.querySelectorAll('.portfolio-item[data-type]');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => {
+  /* ── Portfolio filter — delegation so CMS-replaced grid still works ── */
+  const portfolioFilterRoot = document.querySelector('.portfolio-filters');
+  if (portfolioFilterRoot) {
+    portfolioFilterRoot.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      portfolioFilterRoot.querySelectorAll('.filter-btn').forEach(b => {
         b.classList.remove('active');
         b.setAttribute('aria-selected', 'false');
       });
       btn.classList.add('active');
       btn.setAttribute('aria-selected', 'true');
       const filter = btn.dataset.filter;
-
-      portfolioItems.forEach(item => {
+      document.querySelectorAll('.portfolio-item[data-type]').forEach(item => {
         const show = filter === 'all' || item.dataset.type === filter;
         if (show) {
           item.classList.remove('hidden');
           item.style.display = 'block';
         } else {
           item.classList.add('hidden');
-          // Hide from layout after transition
           setTimeout(() => {
             if (item.classList.contains('hidden')) item.style.display = 'none';
           }, 380);
         }
       });
     });
-  });
+  }
 
   /* ── Contact form ── */
   const contactForm = document.getElementById('contactForm');

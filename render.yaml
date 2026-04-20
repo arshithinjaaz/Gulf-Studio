@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: gulf-studio
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_PASS
+        generateValue: false   # set manually in Render dashboard
+      - key: SESSION_SECRET
+        generateValue: true    # Render auto-generates a secure random value

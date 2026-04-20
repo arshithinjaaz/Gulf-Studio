@@ -6,6 +6,12 @@
 (async function () {
   'use strict';
 
+  /* CMS replaces DOM after main.js registers scroll-reveal — new .fade-up nodes must be shown */
+  function revealInjected(root) {
+    if (!root) return;
+    root.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+  }
+
   let C;
   try {
     const r = await fetch('/api/content');
@@ -122,8 +128,11 @@
         </div>`;
     }).join('');
 
-    // Re-run filter logic if it's already initialised
-    if (typeof window.initPortfolioFilter === 'function') window.initPortfolioFilter();
+    revealInjected(portfolioGrid);
+    const countEl = document.querySelector('.portfolio-item-count');
+    if (countEl && items.length) {
+      countEl.innerHTML = `<strong>${items.length}</strong> curated projects`;
+    }
   }
 
   /* ── 3. Blog grid ── */
@@ -152,28 +161,35 @@
         </div>`;
     }).join('');
 
-    // Re-run blog search if already initialised
-    if (typeof window.initBlogSearch === 'function') window.initBlogSearch();
+    revealInjected(blogGrid);
   }
 
   /* ── 4. Pricing grid ── */
   const pricingGrid = document.getElementById('cms-pricing-grid');
   if (pricingGrid && C.pricing?.packages?.length) {
     const checkIcon = `<svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+    const planIconById = {
+      starter: `<div class="plan-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>`,
+      business: `<div class="plan-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>`,
+      premium: `<div class="plan-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>`,
+    };
     pricingGrid.innerHTML = C.pricing.packages.map((pkg, i) => {
       const featClass = pkg.featured ? ' featured' : '';
       const delay = ['','fade-up-delay-1','fade-up-delay-2'][i] || '';
-      const btnClass = pkg.featured ? 'btn-teal' : 'btn-outline';
-      const priceColor = pkg.featured ? 'var(--teal)' : 'var(--navy)';
+      let btnClass = 'btn-outline';
+      if (pkg.featured) btnClass = 'btn-teal';
+      else if (pkg.id === 'premium') btnClass = 'btn-dark';
+      const planIcon = planIconById[pkg.id] || '';
       return `
         <div class="pricing-card${featClass} fade-up ${delay}">
           ${pkg.badge ? `<div class="plan-badge">${pkg.badge}</div>` : ''}
+          ${planIcon}
           <h3>${pkg.name}</h3>
           <p class="plan-desc">${pkg.description}</p>
           <div class="plan-price-area">
             <div class="plan-price-label">Pricing</div>
-            <div style="font-size:1.5rem;font-weight:800;color:${priceColor};">${pkg.price}</div>
-            <div style="font-size:0.82rem;color:var(--gray-400);margin-top:4px;">${pkg.price_note}</div>
+            <div class="plan-price-value">${pkg.price}</div>
+            <div class="plan-price-note">${pkg.price_note}</div>
           </div>
           <ul class="plan-features">
             ${pkg.features.map(f => `<li class="plan-feature${pkg.featured ? ' teal-text' : ''}">${checkIcon}${f}</li>`).join('')}
@@ -181,6 +197,8 @@
           <a href="contact.html" class="btn ${btnClass} plan-btn">Choose Plan</a>
         </div>`;
     }).join('');
+
+    revealInjected(pricingGrid);
   }
 
   /* ── 5. Contact info fields ── */
